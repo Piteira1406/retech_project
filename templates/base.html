@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ReTech{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav_footer.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="Logo">
+                <a href="{{ url_for('home') }}"><img src="/static/images/Retech.png" alt="Logo" width="100"></a>
+            </div>
+            <menu>
+                <li><a href="{{ url_for('home') }}">Página Inicial</a></li>
+                <li><a href="{{ url_for('products') }}">Produtos</a></li>
+                <li>
+                    <a>+Info</a>
+                    <ul>
+                        <li><a href="{{ url_for('about') }}">Sobre nós</a></li>
+                        <li><a href="{{ url_for('contacts') }}">Contactos</a></li>
+                        <li><a href="{{ url_for('faqs') }}">FAQ's</a></li>
+                    </ul>
+                </li>
+            </menu>
+            <div class="icon">
+                <a href="{{ url_for('cart') }}" class="icon-item"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="{{ url_for('profile') }}" class="icon-item"><i class="fa-solid fa-user"></i></a>
+                <a href="{{ url_for('login') }}" class="icon-item"><i class="fa-solid fa-right-to-bracket"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="{{ url_for('about') }}">Sobre Nós</a></li>
+            <li><a href="{{ url_for('faqs') }}">FAQ's</a></li>
+            <li><a href="{{ url_for('legal') }}">Legal</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
