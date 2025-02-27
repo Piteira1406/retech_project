@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ReTech{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/404.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/carrinho.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/conatctos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/detalhes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/faqs.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gestao_produtos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gestaoutilizador.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/legal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav_footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/paginainicial.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/portefólio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sobrenos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utilizador.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico.png') }}">
+</head>
+
+<body class="wrapper">
+
+    {% block wrapper%}
+    {% endblock %}
+
+</body>
+</html>

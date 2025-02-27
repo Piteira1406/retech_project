@@ -5,8 +5,7 @@
     
     <!-- fontes do google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="C:\Users\Piteira\OneDrive\Ambiente de Trabalho\Retech-main">
-    <link href="/Utilizador.css"  rel="stylesheet">
+    <link href="/static/css/Utilizador.css"  rel="stylesheet">
     <link href="/nav_footer.css"  rel="stylesheet">
     <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
     <!--css do menu e do footer-->
@@ -16,55 +15,14 @@
     <title>Produtos</title>
     <!--favicon-->
     <link rel="icon" type="image/x-icon" href="/public/favicon.ico.png">
-</head>
 
-    <body>
-        <header>
-            <nav>
-              <div>
-                <!-- Local Image-->
-                    <a id="Logo" href="/PaginaInicial.Html"><img src="/public/Retech.png" alt="Logo" width="100"wght="60"></a>
-                </div>
-                
-                    <!-- Menu-->
-                    <menu class="menu">
-                      <li><a href="/PaginaInicial.Html">Pagina Inicial</a></li>
-                      <li><a href="/Products.html"> Produtos</a></li>
-                      <li>
-                        <a>+Info</a>
-                        <ul>
-                          <li><a href="/Sobrenos.html">Sobre nós</a></li>
-                          <li><a href="/Contactos.html">Contactos</a></li>
-                          <li><a href="/Faqs.html">Faq's</a></li>
-                          <li><a href="/Legal.html">Legal</a></li>
-                          <li><a href="/Portefólio.html">Portefólio</a></li>
-                        </ul>
-                      </li>
-                    </menu>
-                    <div class="search-container">
-                      <input type="text" placeholder="Search.." />
-                      <button type="button">Search</button>
-                      </div>
-                  
-                      <div class="icon">
-                        <a href="/carrinho.html" class="icon-item"><i class="fa-solid fa-cart-shopping"></i></a>
-                        
-                        <a href="/Utilizador.html" class="icon-item"><i class="fa-solid fa-user"></i></a>
-                        <a href="/Login.html" class="icon-item"><i class="fa-solid fa-right-to-bracket"></i></a>
-                    </div>
-                      <div><a href="/Gestaoutilizador.html" class="icon-item"><i class="fas fa-user-secret"></i></a></div>
-
-          </header>
           <main class="main">
         <section id="Info">
-            <h2>Alterar Informações de Conta</h2>
+            <h2>{{ username }}</h2>
             <form class="info">
                 <label for="name">Nome:</label>
                 <input type="text" id="name" name="name"><br><br>
 
-                <label for="surname">Apelido:</label>
-                <input type="text" id="surname" name="surname"><br><br>
-                
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email"><br><br>
                 
@@ -107,54 +65,5 @@
             </table>
         </section>
           </main>
-          <footer class="footer list">
-            <!-- Criamos Divs para separar por colunas cada parte do footer-->
-            <li>
-              <h3>
-                <a href="/Retech/Sobrenos.html">Sobre Nós</a>
-              </h3>
-              <ul>
-                <li><a href="/Retech/Sobrenos.html">Quem somos?</a></li>
-                <li><a href="/Retech/Sobrenos.html">Missão</a></li>
-              </ul>
-            </li>
-            <li>
-              <h3>
-                <a href="/Retech/Faqs.html"> FAQ's</a>
-              </h3>
-              <ul>
-                <li><a href="/Retech/Faqs.html">Perguntas mais Frequentes </a></li>
-                <li><a href="/Retech/Faqs.html">Devoluções </a></li>
-              </ul>
-            </li>
-            <li>
-              <h3>
-                <a href="/Retech/Legal.html"> Legal</a>
-              </h3>
-              <ul>
-                <li><a href="/Retech/Legal.html">Termos de serviço </a></li>
-                <li>
-                  <a href="/Retech/Legal.html">Termos e Condições Gerais de Venda</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>
-                <a href="/Retech/Portefólio.html"> Portefólio</a>
-              </h3>
-              <ul>
-                <li>
-                  <a href="/Retech/Portefólio.html"
-                    >Programa de Reciclagem de Eletrónicos</a
-                  >
-                </li>
-                <li>
-                  <a href="/Retech/Portefólio.html"
-                    >Iniciativa de Tecnologia Sustentável em Escolas</a
-                  >
-                </li>
-              </ul>
-            </li>
-          </footer>
         </body>
         </html>
