@@ -38,18 +38,11 @@ class Cart(db.Model):
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-# Método para armazenar os parâmetros no registo
-def register_user(username, email, password):
-    hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
-    new_user = User(username=username, email=email, password=hashed_password)
-    db.session.add(new_user)
-    db.session.commit()
-
 # Rotas
 @app.route('/')
 def home():
     products = Product.query.all()
-    return render_template('base.html', products=products)
+    return render_template('index.html', products=products)  # Corrigido aqui!
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -63,13 +56,15 @@ def login():
         flash('Login falhou. Verifica as credenciais.')
     return render_template('login.html')
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/register.html', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form['username']
         email = request.form['email']
-        password = request.form['password']
-        register_user(username, email, password)
+        password = bcrypt.generate_password_hash(request.form['password']).decode('utf-8')
+        user = User(username=username, email=email, password=password)
+        db.session.add(user)
+        db.session.commit()
         flash('Conta criada com sucesso!')
         return redirect(url_for('login'))
     return render_template('register.html')
