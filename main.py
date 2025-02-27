@@ -56,7 +56,7 @@ def login():
         flash('Login falhou. Verifica as credenciais.')
     return render_template('login.html')
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/register.html', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form['username']
