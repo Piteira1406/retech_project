@@ -2,22 +2,16 @@ body {
     font-family: "Exo 2", sans-serif;
     background-color: rgb(226, 225, 225);
     scroll-behavior: smooth;
-    height: 100vh;
+    height: 100%;
     margin: 0px;
     padding: 0px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
 
-.card { 
-    display: inline-block;
-    width: auto;
-    padding: 20px;
-    margin: 10px;
-    box-sizing: border-box;
-}
 
 .container {
     background-color: #f9f9f9;

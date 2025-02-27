@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    
-    <!-- fontes do google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="/static/css/Utilizador.css"  rel="stylesheet">
-    <link href="/nav_footer.css"  rel="stylesheet">
-    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
-    <!--css do menu e do footer-->
-    
-    <!--Site ficar responsivo-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-    <!--favicon-->
-    <link rel="icon" type="image/x-icon" href="/public/favicon.ico.png">
+{% extends 'partials/base.html' %}
+{% block title %}Login | ReTech{% endblock %}
+
+{% block wrapper %}
+ 
+{% include "partials/header.html" %}
 
           <main class="main">
         <section id="Info">
@@ -65,5 +54,6 @@
             </table>
         </section>
           </main>
-        </body>
-        </html>
+          {% include "partials/footer.html" %}
+{% endblock %}
+        

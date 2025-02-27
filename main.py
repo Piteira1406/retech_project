@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, flash, session
+from flask import Flask, render_template, redirect, url_for, request, flash, session, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
@@ -136,8 +136,8 @@ cart = []
 @app.route('/cart')
 @login_required
 def cart_page():
-    produtos = [Product.query.get(prod_id) for prod_id in cart]
-    return render_template('cart.html', produtos=produtos)
+    products = [Product.query.get(prod_id) for prod_id in cart]
+    return render_template('cart.html', products=products)
 
 #################Adicionar/Remover do carrinho#################
 @app.route('/add_to_cart/<int:product_id>', methods=['POST'])
@@ -161,8 +161,8 @@ def checkout():
         cart.clear()
         flash('Compra realizada com sucesso!', 'success')
         return redirect(url_for('index'))
-    produtos = [Product.query.get(prod_id) for prod_id in cart]
-    return render_template('checkout.html', produtos=produtos)
+    products = [Product.query.get(prod_id) for prod_id in cart]
+    return render_template('checkout.html', products=products)
 
 ####################################################Gestão/ADMIN############################################
 
@@ -211,7 +211,7 @@ def delete_product(product_id):
 
 
 # Páginas adicionais###############TRABALHAR MAIS TARDE##################
-"""@app.route('/categories')
+@app.route('/categories')
 def categories():
     return render_template('Categorias.html')
 
@@ -238,7 +238,7 @@ def faqs():
 
 @app.route('/legal')
 def legal():
-    return render_template('Legal.html')"""
+    return render_template('Legal.html')
 
 if __name__ == '__main__':
     with app.app_context():

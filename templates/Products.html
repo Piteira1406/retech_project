@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    
-    <!-- fontes do google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="C:\Users\Piteira\OneDrive\Ambiente de Trabalho\Retech-main">
-    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
-    <link href="/Products.css"  rel="stylesheet">
-    <!--css do menu e do footer-->
-    <link href="/nav_footer.css" rel="stylesheet">
-    <!--Site ficar responsivo-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-    <!--favicon-->
-    <link rel="icon" type="image/x-icon" href="/public/favicon.ico.png">
-</head>
+{% extends 'partials/base.html' %}
+{% block title %}Login | ReTech{% endblock %}
 
-<body>
-    <body>
+{% block wrapper %}
+ 
+{% include "partials/header.html" %}
+
+
         <header>
             <nav>
               <div id="Logo">
@@ -204,55 +191,4 @@
         </article>
     </div>
     </main>
-    <footer class="footer list">
-            <!-- Criamos Divs para separar por colunas cada parte do footer-->
-            <li>
-              <h3>
-                <a href="/Sobrenos.html">Sobre Nós</a>
-              </h3>
-              <ul>
-                <li><a href="/Sobrenos.html">Quem somos?</a></li>
-                <li><a href="/Sobrenos.html">Missão</a></li>
-              </ul>
-            </li>
-            <li>
-              <h3>
-                <a href="/Faqs.html"> FAQ's</a>
-              </h3>
-              <ul>
-                <li><a href="/Faqs.html">Perguntas mais Frequentes </a></li>
-                <li><a href="/Faqs.html">Devoluções </a></li>
-              </ul>
-            </li>
-            <li>
-              <h3>
-                <a href="/Legal.html"> Legal</a>
-              </h3>
-              <ul>
-                <li><a href="/Legal.html">Termos de serviço </a></li>
-                <li>
-                  <a href="/Legal.html">Termos e Condições Gerais de Venda</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <h3>
-                <a href="/Portefólio.html"> Portefólio</a>
-              </h3>
-              <ul>
-                <li>
-                  <a href="/Portefólio.html"
-                    >Programa de Reciclagem de Eletrónicos</a
-                  >
-                </li>
-                <li>
-                  <a href="/Portefólio.html"
-                    >Iniciativa de Tecnologia Sustentável em Escolas</a
-                  >
-                </li>
-              </ul>
-            </li>
-          </footer>
-</body>
-
-</html>
+    

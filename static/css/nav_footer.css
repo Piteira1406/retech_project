@@ -1,14 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
 
-body {
+.wrapper {
     font-family: 'Exo 2', sans-serif;
     background-color: #ecedf1;
     scroll-behavior: smooth;
     margin: 0;
-    height: auto;
+    height: 100%;
     padding: 0;
-    width: 100%;  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
 }
 
 .img{
@@ -188,15 +192,14 @@ footer {
     background-color: #ffffff;
     position: relative;
     width: 100%;
-    
     display: flex;
-    bottom: 0;
+    justify-content: space-around; 
     justify-content: center;
     align-items: center;
 }
 
 footer ul {
-    display: block;
+    display: inherit;
     list-style: none;
     padding: 0;
     margin: 0;
