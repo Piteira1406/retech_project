@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="/Gestaoutilizador.css" rel="stylesheet">
+    <!--css do menu e do footer-->
+    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
+    <link href="/nav_footer.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico.png">
+    <title>Gestao utilizador</title>
+</head>
+<body>
+    <header>
+        <nav> 
+            <div>
+            <!-- Local Image-->
+                <a id="Logo" href="/PaginaInicial.Html"><img src="/public/Retech.png" alt="Logo" width="100"wght="60"></a>
+            </div>
+            
+            <menu class="menu">
+                <li><a href="/Categorias.html">Categorias</a></li>
+                <li><a href="/Gestaoutilizador.html">Utilizadores</i></a></li>
+                <li><a href="/gestao_produtos.html">Produtos</a></li>
+            </menu>
+              <div class="icon">
+                <a href="/PaginaInicial.Html" class="icon-item"><i class="fa-solid fa-shop"></i></a>
+            </div>
+        </nav>
+    </header>
+<h1>Gestão de Utilizadores</h1>
+    <main>
+        <section class="gestao-utilizador"> 
+            <div class="filter-container">
+                <input type="text" id="search-bar" placeholder="Pesquisar utilizador...">
+                <select id="status-filter">
+                    <option value="all">Todos</option>
+                    <option value="active">Ativo</option>
+                    <option value="inactive">Inativo</option>
+                </select>
+            </div>
+        </section>
+        <section class="utilizador-lista">        
+            <table class="utilizador-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Data de Registro</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list">
+                    <!-- User rows will be dynamically inserted here -->
+                <tr>
+                    <td>João Silva</td>
+                    <td>joao.silva@example.com</td>
+                    <td>01/01/2022</td>
+                    <td>Ativo</td>
+                    <td><button>Inativo</button> <button>Detalhes</button></td>
+                </tr>
+                <tr>
+                    <td>Maria Santos</td>
+                    <td>maria.santos@example.com</td>
+                    <td>15/03/2022</td>
+                    <td>Inativo</td>
+                    <td><button>Ativo</button> <button>Detalhes</button></td>
+                </tr>
+                <tr>
+                    <td>Carlos Pereira</td>
+                    <td>carlos.pereira@example.com</td>
+                    <td>22/05/2022</td>
+                    <td>Ativo</td>
+                    <td><button>Inativo</button> <button>Detalhes</button></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    
+</body>
+</html>

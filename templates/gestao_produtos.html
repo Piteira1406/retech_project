@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="/Products.css" rel="stylesheet">
+    <link href="/nav_footer.css" rel="stylesheet">
+    <link href="/gestao_produtos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Produtos</title>
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico.png">
+</head>
+<body>
+    <header>  
+        <nav> 
+            
+            <div>
+            <!-- Local Image-->
+                <a id="Logo" href="/PaginaInicial.Html"><img src="/public/Retech.png" alt="Logo" width="100"wght="60"></a>
+            </div>
+            <menu class="menu">
+                <li><a href="/Categorias.html">Categorias</a></li>
+                <li><a href="/Gestaoutilizador.html">Utilizadores</i></a></li>
+                <li><a href="/gestao_produtos.html">Produtos</a></li>
+            </menu>
+              <div class="icon">
+                <a href="/PaginaInicial.Html" class="icon-item"><i class="fa-solid fa-shop"></i></a>
+            </div>
+        </nav>
+</header>
+<h1>Gestão de Produtos</h1>
+<section class="produtos" >
+    
+    </section>    
+<main>
+        <section class="product-form">
+            <h3>Adicionar Categoria</h3>
+            <form>
+                <!--Nome-->
+                <input type="text" id="categoryName" name="categoryName" placeholder="Nome" required>
+                <!--Descrição-->
+                <input type="text" id="categoryDescription" name="categoryDescription" placeholder="Descrição"  maxlength="500" required></input>
+                <!--Preço-->
+                <input type="currency" id="price" name="price" placeholder="Preço" required></input>
+                <div class="image-upload">
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <label for="image">
+                      <i class="fa-solid fa-upload"></i>
+                    </label>
+                  </div>
+                <!--Stock-->
+                <input type="number" id="stock" name="quantity" placeholder="Stock" min="1" max="1000"> 
+                <!--Categoria-->
+                <select id="category" name="category" placeholder="Categoria"> 
+                    <option value="telemoveis">Telemóveis</option>
+                    <option value="portateis">Portáteis</option>
+                    <option value="relogio">Relógios</option>
+                    <option value="earphones">Earphones</option>
+                </select>
+                <button type="submit">Adicionar</button>     
+            </form>
+        </div>
+    </section>
+    <div class="product-filter">
+        <input type="text" id="search-bar" placeholder="Pesquisar produtos...">
+        <select id="status-filter">
+            <option value="name">Inativo</option>
+            <option value="price">Ativo</option>
+            <br></br>
+            <option value="telemoveis">Telemóveis</option>
+            <option value="portateis">Portáteis</option>
+            <option value="relogio">Relógios</option>
+            <option value="earphones">Earphones</option>
+        </select>
+        
+    </div>
+
+        
+        <section class="container-product-table">
+        <table class="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="/public/imagens/iphone/1741-apple-iphone-13-pro-256gb-verde-alpino-libre.webp" alt="iPhone 13 Pro" width="50"></td>
+                    <td>iPhone 13 Pro</td>
+                    <td>600,00€</td>
+                    <td>Smartphones</td>
+                    <td>50</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/xiaomi/1505-1 (1).jpg" alt="Xiaomi 12t Pro" width="50"></td>
+                    <td>Xiaomi 12t Pro</td>
+                    <td>550,00€</td>
+                    <td>Smartphones</td>
+                    <td>30</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/samsung s20 ultra/1505-1.jpg" alt="Samsung s20 ultra 5G" width="50"></td>
+                    <td>Samsung s20 ultra 5G</td>
+                    <td>750,00€</td>
+                    <td>Smartphones</td>
+                    <td>25</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/mac/apple-macbook-pro-apple-m3-max-plata-foto.webp" alt="Macbook pro M3 Max" width="50"></td>
+                    <td>Macbook pro M3 Max</td>
+                    <td>1500,00€</td>
+                    <td>Portáteis</td>
+                    <td>20</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/surface/surface Pro 8.jpg" alt="Microsoft surface 8 pro" width="50"></td>
+                    <td>Microsoft surface 8 pro</td>
+                    <td>1200,00€</td>
+                    <td>Portáteis</td>
+                    <td>15</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/surface/c08483658.png" alt="Hp Elite x360 1040 g10" width="50"></td>
+                    <td>Hp Elite x360 1040 g10</td>
+                    <td>1000,00€</td>
+                    <td>Portáteis</td>
+                    <td>10</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/aipods 4/airpods-4-anc-select-202409_FV1.jpeg" alt="Airpods 4" width="50"></td>
+                    <td>Airpods 4</td>
+                    <td>150,00€</td>
+                    <td>Earphones</td>
+                    <td>100</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/air pod pro 2/1832-airpods-pro-2a-generacion-con-estuche-de-carga-inalambrica-usb-c-blancos.webp" alt="Airpods pro 2" width="50"></td>
+                    <td>Airpods pro 2</td>
+                    <td>190,00€</td>
+                    <td>Earphones</td>
+                    <td>80</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/fones/1_p046688_3a93caf7_thumbnail_4096.jpg" alt="Bose QuietComfort Ultra" width="50"></td>
+                    <td>Bose QuietComfort Ultra</td>
+                    <td>30,00€</td>
+                    <td>Earphones</td>
+                    <td>200</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/applewatch/1851-apple-watch-series-10-gps-46mm-caja-de-aluminio-negro-azabache-con-correa-deportiva-negra-m-l.webp" alt="Apple Watch series 10" width="50"></td>
+                    <td>Apple Watch series 10</td>
+                    <td>1300,00€</td>
+                    <td>Smartwatches</td>
+                    <td>40</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/garmin/1_p046635_66439f7b_thumbnail_4096.jpg" alt="Samsung Galaxy Watch 5 Pro" width="50"></td>
+                    <td>Samsung Galaxy Watch 5 Pro</td>
+                    <td>350,00€</td>
+                    <td>Smartwatches</td>
+                    <td>60</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="/public/imagens/relogio/p039824_1_9518612f_thumbnail_4096.jpg" alt="Smartwatch Garmin Fenix" width="50"></td>
+                    <td>Smartwatch Garmin Fenix</td>
+                    <td>400,00€</td>
+                    <td>Smartwatches</td>
+                    <td>70</td>
+                    <td>Ativo</td>
+                    <td>
+                        <a href="/edit-category/1" id="tabela">
+                            <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <a href="/delete-category/1" id="tabela" 
+                            onclick="return confirm('Tem certeza que deseja eliminar o produto?')">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+       </section>
+     </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="/Categorias.css" rel="stylesheet">
+    <!--css do menu e do footer-->
+    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
+    <link href="/nav_footer.css" rel="stylesheet">
+    <title>Categorias</title>
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico.png">
+</head>
+<body>
+    <header>  
+        <nav> 
+            
+            <div>
+            <!-- Local Image-->
+                <a id="Logo" href="/PaginaInicial.Html"><img src="/public/Retech.png" alt="Logo" width="100"wght="60"></a>
+            </div>
+            <menu class="menu">
+                <li><a href="/Categorias.html">Categorias</a></li>
+                <li><a href="/Gestaoutilizador.html">Utilizadores</i></a></li>
+                <li><a href="/gestao_produtos.html">Produtos</a></li>
+            </menu>
+              <div class="icon">
+                <a href="/PaginaInicial.Html" class="icon-item"><i class="fa-solid fa-shop"></i></a>
+            </div>
+        </nav>
+</header>
+<h1>Categorias</h1>
+<main class="categoria">
+     
+<section class="categoria-form">
+            <h3>Adicionar Categoria</h3>
+            <form id="addCategoryForm">
+                <!--<label for="categoryName">Nome:</label> -->
+                <input type="text" id="categoryName" name="categoryName" placeholder="Nome" required>
+                <!--<label for="categoryDescription">Descrição:</label>-->
+                <input type="text" id="categoryDescription" name="categoryDescription" placeholder="Descrição"  maxlength="500" required></input>
+                <!-- <label for="quantity">Quantidade:</label> -->
+                <input type="number" id="quantity" name="quantity" placeholder="Quantidade" min="1" max="1000"> 
+                <button type="submit">Adicionar</button>
+                
+            </form>
+        </div>
+
+        
+    </section>
+    <section class="categoria-lista">
+        <table class="categoria-tabela">
+        <thead>
+            <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Número de produtos</th>
+            <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Telemóveis</td>
+            <td>Dispositivo móveis</td>
+            <td>10</td>
+            <td>
+                <a href="/edit-category/1" id="tabela">
+                    <i class="fa-solid fa-pencil"></i>
+                </a>
+                <a href="/delete-category/1" id="tabela" 
+                    onclick="return confirm('Tem certeza que deseja eliminar Telemóveis? Isso removerá todos os produtos associados.')">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
+            </td>
+            </tr>
+            <tr>
+            <td>Portáites</td>
+            <td>Pc/ Desktop</td>
+            <td>5</td>
+            <td>
+                <a href="/edit-category/1" id="tabela">
+                    <i class="fa-solid fa-pencil"></i>
+                </a>
+                <a href="/delete-category/1" id="tabela" 
+                    onclick="return confirm('Tem certeza que deseja eliminar Pc/Desktop? Isso removerá todos os produtos associados.')">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
+            </td>
+            </tr>
+            <tr>
+                <td>Smartwatch</td>
+                <td>Smartwatch</td>
+                <td>100</td>
+                <td>
+                    <a href="/edit-category/1" id="tabela">
+                        <i class="fa-solid fa-pencil"></i>
+                    </a>
+                    <a href="/delete-category/1" id="tabela" 
+                        onclick="return confirm('Tem certeza que deseja eliminar Smartwatch? Isso removerá todos os produtos associados.')">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </a>
+                    <tr>
+                        <td>Earphones</td>
+                        <td>Audio</td>
+                        <td>200</td>
+                        <td>
+                            <a href="/edit-category/1" id="tabela">
+                                <i class="fa-solid fa-pencil"></i>
+                            </a>
+                            <a href="/delete-category/1" id="tabela" 
+                                onclick="return confirm('Tem certeza que deseja eliminar Audio? Isso removerá todos os produtos associados.')">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </td>
+                        </tr>
+                </td>
+                </tr>
+            <!-- Add more categories as needed -->
+        </tbody>
+        </table>
+    </section>
+    
+</mains>
+
+
+</body>
+</html>

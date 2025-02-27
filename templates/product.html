@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- fontes do google e ficheiros -->
+    <!--<link href="https://fonts.googleapis.com/css2?family=E:wght@400;600&display=swap" rel="stylesheet">-->
+    <link href="C:\Users\migue\OneDrive\Desktop\Faculdade\Pw\Projeto 1\projeto\Home.Html"/>
+    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
+    <!--css do menu e do footer-->
+    <link href="/nav_footer.css" rel="stylesheet" />
+    <!--css da pagina inicial -->
+    <link href="/Detalhes.css" rel="stylesheet" />
+    <!--Site ficar responsivo   -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReTech</title>
+    <!--favicon-->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/public/favicon.ico.png"/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="Logo">
+          <!-- Local Image-->
+          <a href="/PaginaInicial.Html"
+            ><img
+              src="/public/Retech.png"
+              alt="Logo"
+              width="100"
+              wght="60"
+          /></a>
+        </div>
+
+        <!-- Menu-->
+        <menu class="menu">
+          <li><a href="/PaginaInicial.Html">Pagina Inicial</a></li>
+          <li><a href="/Products.html"> Produtos</a></li>
+          <li>
+            <a>+Info</a>
+            <ul>
+              <li><a href="/Sobrenos.html">Sobre nós</a></li>
+              <li><a href="/Contactos.html">Contactos</a></li>
+              <li><a href="/Faqs.html">Faq's</a></li>
+              <li><a href="/Legal.html">Legal</a></li>
+              <li><a href="/Portefólio.html">Portefólio</a></li>
+            </ul>
+          </li>
+        </menu>
+        <div class="search-container">
+          <input type="text" placeholder="Search.." />
+          <button type="button">Search</button>
+          </div>
+      
+          <div class="icon">
+            <a href="/carrinho.html" class="icon-item"><i class="fa-solid fa-cart-shopping"></i></a>
+            
+            <a href="/Utilizador.html" class="icon-item"><i class="fa-solid fa-user"></i></a>
+            <a href="/Login.html" class="icon-item"><i class="fa-solid fa-right-to-bracket"></i></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+    <section class="product-details">
+      <article class="card">   
+        <img src="/public/imagens/iphone/1741-apple-iphone-13-pro-256gb-verde-alpino-libre.webp" alt="Product 1" width="200px" height="200px">
+      </article>
+      <article>  
+      <h1>Iphone 13 Pro</h1>
+        
+        <ul >
+        <li>Processador A15 Bionic</li>
+        <li>Sistema triplo Câmeras</li>
+        <li>Suporte a redes 5G</li>
+    </ul>
+    <p><strong>€600</strong></p>
+    <button onclick="location.href='/carrinho.html'" type="button">Adicionar ao Carrinho</button>
+</article>
+    </section>
+    <h2>Produtos Recomendados</h2>
+    <section class="recommended-products">
+      <article class="recommended-item">
+        <img  src="/public/imagens/samsung s20 ultra/1505-1.jpg"
+        alt="destaque 2"
+        width="200px"
+        height="200px" />
+        <p>Samsung S20 Ultra</p>
+        <p>€49.99</p>
+        <button type="button">Adicionar ao Carrinho</button>
+      </article>
+      <article class="recommended-item">
+        <img src="/public/imagens/mac/apple-macbook-pro-apple-m3-max-plata-foto.webp" alt="Product 4" width="200px" height="200px" />
+        <p>Macbook pro M3 Max</p>
+        <p>1500,00€</p>
+        <button type="button">Adicionar ao Carrinho</button>
+      </article>
+      <article class="recommended-item">
+        <img src="/public/imagens/xiaomi/1520-1 (1).jpg"
+        alt="destaque 3"
+        width="200px"
+        height="200px"/>
+        <p>Xiaomi 12T Pro</p>
+        <p>450,00€</p>
+        <button type="button">Adicionar ao Carrinho</button>
+      </article>
+    </section>
+    </main>
+
+    <footer class="footer list">
+        <!-- Criamos Divs para separar por colunas cada parte do footer-->
+        <li>
+          <h3>
+            <a href="/Sobrenos.html">Sobre Nós</a>
+          </h3>
+          <ul>
+            <li><a href="/Sobrenos.html">Quem somos?</a></li>
+            <li><a href="/Sobrenos.html">Missão</a></li>
+          </ul>
+        </li>
+        <li>
+          <h3>
+            <a href="/Faqs.html"> FAQ's</a>
+          </h3>
+          <ul>
+            <li><a href="/Faqs.html">Perguntas mais Frequentes </a></li>
+            <li><a href="/Faqs.html">Devoluções </a></li>
+          </ul>
+        </li>
+        <li>
+          <h3>
+            <a href="/Legal.html"> Legal</a>
+          </h3>
+          <ul>
+            <li><a href="/Legal.html">Termos de serviço </a></li>
+            <li>
+              <a href="/Legal.html">Termos e Condições Gerais de Venda</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>
+            <a href="/Portefólio.html"> Portefólio</a>
+          </h3>
+          <ul>
+            <li>
+              <a href="/Portefólio.html"
+                >Programa de Reciclagem de Eletrónicos</a>
+            </li>
+            <li>
+              <a href="/Portefólio.html"
+                >Iniciativa de Tecnologia Sustentável em Escolas</a>
+            </li>
+          </ul>
+        </li>
+      </footer>
+    </body>
+  </html>

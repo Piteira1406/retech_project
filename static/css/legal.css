@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+/*   */
+main{
+    width: 100%;    
+    height: auto;
+    justify-content: space-around;
+}
+
+main h2{
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+    padding: 0;
+}
+main p{
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main h3{
+    font-size: 1.3em;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.legal h2{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.legal{
+    width: auto;
+    text-align: justify;
+}
+
+
+
+.legal h5{
+    color: rgb(0, 0, 0);
+    font-size: 1.3em;
+}
+
+.legal p{
+    text-align: justify;
+    color: rgb(0, 0, 0);
+}
+.legal{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+.legal {
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    main h2, main h3, main p {
+        font-size: 1em;
+    }
+
+    .legal {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .legal h2, .legal h5 {
+        font-size: 1.2em;
+    }
+
+    .legal p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 5px;
+    }
+
+    main h2, main h3, main p {
+        font-size: 0.9em;
+    }
+
+    .legal {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .legal h2, .legal h5 {
+        font-size: 1em;
+    }
+
+    .legal p {
+        font-size: 0.8em;
+    }
+}

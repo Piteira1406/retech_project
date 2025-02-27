@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: "Exo 2", sans-serif;
+            background-color: rgb(226, 225, 225);
+            scroll-behavior: smooth;
+            height: 100vh;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card { 
+            display: inline-block;
+            width: auto;
+            padding: 20px;
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container input[type="email"], 
+        .container input[type="text"], 
+        .container input[type="password"] {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .container form button {
+            background-color: #0f0f0f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .container form button:hover {
+            background-color: #2e2e2e;
+        }
+
+        form input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 90%;
+        }
+
+        .register {
+            background-color: #0f0f0f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .register:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                max-width: 90%;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            form input, form button {
+                width: auto;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Login</h2>
+        <div class="container">
+            <form action="user_page.html" method="post">
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <button onclick="window.location.href='Utlizador.html'">Entrar</button>
+                <button onclick="window.location.href='Registo.html'">Registrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

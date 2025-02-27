@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- fontes do google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="C:\Users\Piteira\OneDrive\Ambiente de Trabalho\Retech-main">
+    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
+    <link href="/Products.css"  rel="stylesheet">
+    <!--css do menu e do footer-->
+    <link href="/nav_footer.css" rel="stylesheet">
+    <!--Site ficar responsivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico.png">
+</head>
+
+<body>
+    <body>
+        <header>
+            <nav>
+              <div id="Logo">
+                <!-- Local Image-->
+                <a href="/PaginaInicial.Html"
+                  ><img
+                    src="/public/Retech.png"
+                    alt="Logo"
+                    width="100"
+                    wght="60"
+                /></a>
+              </div>
+      
+              <!-- Menu-->
+              <menu class="menu">
+                <li><a href="/PaginaInicial.Html">Pagina Inicial</a></li>
+                <li><a href="/Products.html"> Produtos</a></li>
+                <li>
+                  <a>+Info</a>
+                  <ul>
+                    <li><a href="/Sobrenos.html">Sobre nós</a></li>
+                    <li><a href="/Contactos.html">Contactos</a></li>
+                    <li><a href="/Faqs.html">Faq's</a></li>
+                    <li><a href="/Legal.html">Legal</a></li>
+                    <li><a href="/Portefólio.html">Portefólio</a></li>
+                  </ul>
+                </li>
+              </menu>
+              <div class="search-container">
+                <input type="text" placeholder="Search.." />
+                <button type="button">Search</button>
+                </div>
+            
+                <div class="icon">
+                  <a href="/carrinho.html" class="icon-item"><i class="fa-solid fa-cart-shopping"></i></a>
+                  
+                  <a href="/Utilizador.html" class="icon-item"><i class="fa-solid fa-user"></i></a>
+                  <a href="/Login.html" class="icon-item"><i class="fa-solid fa-right-to-bracket"></i></a>
+              </div>
+          </nav>
+        </header>
+      <main>
+        <div class="product-filter">
+          <select id="product-filter">
+            <option value="price">Preço</option>
+            <option value="popularity">Popularidade</option>
+            <option value="category">Categoria</option>
+          </select>
+        </div>
+
+    <div class="product-cards">
+        <article class="card">
+            <img src="/public/imagens/iphone/1741-apple-iphone-13-pro-256gb-verde-alpino-libre.webp" alt="Product 1" width="200px" height="200px">
+            <h2>iPhone 13 Pro</h2>
+            <span class="price">600,00€</span>
+            <ul>
+                <li>Processador A15 Bionic</li>
+                <li>Sistema triplo Câmeras</li>
+                <li>Suporte a redes 5G</li>
+            </ul>
+            <button onclick="location.href='/Detalhes.html'"class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/xiaomi/1505-1 (1).jpg" alt="Product 2" width="200px" height="200px">
+            <h2>Xiaomi 12t Pro</h2>
+            <span class="price">550,00€</span>
+            <ul>
+                <li>Processador Snapdragon 8+ Gen 1</li>
+                <li>Sistema triplo Câmeras</li>
+                <li>Sistema Operacional MIUI</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/samsung s20 ultra/1505-1.jpg" alt="Product 3" width="200px" height="200px">
+            <h2>Samsung s20 ultra 5G</h2>
+            <span class="price">750,00€</span>
+            <ul>
+                <li>Processador Exynos 990</li>
+                <li>Câmeras Quádrupla</li>
+                <li>Sistema Operacional One UI</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/mac/apple-macbook-pro-apple-m3-max-plata-foto.webp" alt="Product 4" width="200px" height="200px">
+            <h2>Macbook pro M3 Max</h2>
+            <span class="price">1500,00€</span>
+            <ul>
+                <li>GPU de 30 núcleos</li>
+                <li>Armazenamento de 1 TB SSD</li>
+                <li>Memória RAM de 36 GB</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/surface/surface Pro 8.jpg" alt="Product 5" width="250px" height="200px">
+            <h2>Microsoft surface 8 pro</h2>
+            <span class="price">12000,00€</span>
+            <ul>
+                <li>Memória RAM de 32 GB/li>
+                <li>Armazenamento 1 TB SSD</li>
+                <li>GPU Intel Iris Xe</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/surface/c08483658.png" alt="Product 6" width="300px" height="200px">
+            <h2>Hp Elite x360 1040 g10</h2>
+            <span class="price">1000,00€</span>
+            <ul>
+                <li>Memória RAM de 16 GB</li>
+                <li>Armazenamento de 512 GB SSD</li>
+                <li>GPU Intel UHD Graphics</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/applewatch/1851-apple-watch-series-10-gps-46mm-caja-de-aluminio-negro-azabache-con-correa-deportiva-negra-m-l.webp" alt="Product 7" width="200px" height="200px">
+            <h2>Apple Watch series 10</h2>
+            <span class="price">1300,00€</span>
+            <ul>
+                <li>Processador S10</li>
+                <li>Bateria de carregamento rápido</li>
+                <li>watchOS 11 com Siri</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/garmin/1_p046635_66439f7b_thumbnail_4096.jpg" alt="Product 8" width="200px" height="200px">
+            <h2>Samsung Galaxy Watch 5 Pro</h2>
+            <span class="price">350,00€</span>
+            <ul>
+                <li>Sistema One UI Watch 4.5</li>
+                <li>Navegação e Route Workout</li>
+                <li>Bateria até 80h de uso</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/relogio/p039824_1_9518612f_thumbnail_4096.jpg" alt="Product 9" width="200px" height="200px">
+            <h2>Smartwatch Garmin Fenix</h2>
+            <span class="price">400,00€</span>
+            <ul>
+                <li>Carregamento solar</li>
+                <li>Desporto e GPS</li>
+                <li>Monitoramento de saúde</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/aipods 4/airpods-4-anc-select-202409_FV1.jpeg" alt="Product 10" width="200px" height="200px">
+            <h2>Airpods 4</h2>
+            <span class="price">150,00€</span>
+            <ul>
+                <li>Controles por toque</li>
+                <li>Bateria até 6 horas de reprodução</li>
+                <li>Resistência à água</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/air pod pro 2/1832-airpods-pro-2a-generacion-con-estuche-de-carga-inalambrica-usb-c-blancos.webp" alt="Product 11" width="200px" height="200px">
+            <h2>Airpods pro 2</h2>
+            <span class="price">190,00€</span>
+            <ul>
+                <li>Cancelamento de ruído ativo</li>
+                <li>Bateria até 8 horas de reprodução</li>
+                <li>Resistência à água</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+        <article class="card">
+            <img src="/public/imagens/fones/1_p046688_3a93caf7_thumbnail_4096.jpg" alt="Product 12" width="200px" height="200px">
+            <h2>Bose QuietComfort Ultra</h2>
+            <span class="price">30,00€</span>
+            <ul>
+                <li>Cancelamento de ruído ajustável</li>
+                <li>Bateria até 8 horas</li>
+                <li>Resistência à água</li>
+            </ul>
+            <button class="buy-button">Comprar</button>
+        </article>
+    </div>
+    </main>
+    <footer class="footer list">
+            <!-- Criamos Divs para separar por colunas cada parte do footer-->
+            <li>
+              <h3>
+                <a href="/Sobrenos.html">Sobre Nós</a>
+              </h3>
+              <ul>
+                <li><a href="/Sobrenos.html">Quem somos?</a></li>
+                <li><a href="/Sobrenos.html">Missão</a></li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                <a href="/Faqs.html"> FAQ's</a>
+              </h3>
+              <ul>
+                <li><a href="/Faqs.html">Perguntas mais Frequentes </a></li>
+                <li><a href="/Faqs.html">Devoluções </a></li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                <a href="/Legal.html"> Legal</a>
+              </h3>
+              <ul>
+                <li><a href="/Legal.html">Termos de serviço </a></li>
+                <li>
+                  <a href="/Legal.html">Termos e Condições Gerais de Venda</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>
+                <a href="/Portefólio.html"> Portefólio</a>
+              </h3>
+              <ul>
+                <li>
+                  <a href="/Portefólio.html"
+                    >Programa de Reciclagem de Eletrónicos</a
+                  >
+                </li>
+                <li>
+                  <a href="/Portefólio.html"
+                    >Iniciativa de Tecnologia Sustentável em Escolas</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </footer>
+</body>
+
+</html>
