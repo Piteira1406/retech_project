@@ -24,7 +24,13 @@
         <div class="icon">
             <a href="{{ url_for('cart_page') }}" class="icon-item"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="{{ url_for('profile') }}" class="icon-item"><i class="fa-solid fa-user"></i></a>
-            <a href="{{ url_for('login') }}" class="icon-item"><i class="fa-solid fa-right-to-bracket"></i></a>
+            <form action="{{ url_for('logout') }}" method="POST" style="display:inline;">
+                <button type="submit" class="icon-item" style="background: none; border: none; cursor: pointer;">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+            </form>
+            
+            
         </div>
     </nav>
 </header>

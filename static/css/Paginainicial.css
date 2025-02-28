@@ -1,233 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
-.banner{
-   width: 100%;
-    height: 100%;
-}
-.banner img{
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 0px;
-}
 
+
+
+
+/* ================= BANNER ================= */
+#banner {
+    width: 100%;
     
-
-#title{
-    margin: 40px 25px;
-}
-
-/*destaques*/
-.destaques{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+   
+    margin: 10px 0;
+    display: flex;
     justify-content: center;
-}
-article{
-    margin: 20px;
-    text-align: center;
-    border: none;
-    padding: 50px;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
-    button{
-        background-color: #0f0f0f;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        cursor: pointer;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-top: 10px;}
-}
-/*projetos*/
-.projetos{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
-}
-article{
-    margin: 20px;
-    border: none;
-    padding: 50px;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    align-items: center;
+
+    border-radius: 10px;
 }
 
-
-
-
-
-/*sobre nós*/
-.content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-}
-
-
-#location-map{
-    margin: 20px;
-    border: none;
-    padding: 50px;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
-}
-
-#sobrenos{
-    cursor: pointer;
-    margin: 20px;
-    border: none;
-    padding: 50px;
-    justify-content: center;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
-    }
-
-/*responsivo*/
-
-@media (max-width: 768px){
-    .banner button{
-        font-size: 1.5em;
-        top: 30%;
-        left: 10%;
-    }
-    #title{
-        font-size: 1.8em;
-        margin: 20px 15px;
-    }
-    .destaques{
-        grid-template-columns: 1fr;
-    }
-    .projetos{
-        grid-template-columns: 1fr;
-    }
-    .content{
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Estilos gerais */
-.banner {
-    width: 100%;
-    height: 100%;
-}
 .banner img {
     width: 100%;
     height: 100%;
+    max-height: 230px; /* Ajuste fino para evitar que fique muito alto */
     object-fit: cover;
-}
-
-/*.banner button {
-    position: absolute;
-    top: 35%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
-    padding: 10px 20px;
-    color: white;
     cursor: pointer;
-    font-weight: bold;
-    background-color: #0f0f0f;
-    border: none;
-    border-radius: 25px;
-}*/
-.banner button {
-    font-size: 2em;
-    padding: 10px 20px;
-    color: white;
-    font-weight: bold;
-    background-color: #0f0f0f;
-    border: none;
-    border-radius: 25px;
-    transition: font-size 0.3s ease, padding 0.3s ease;
+    border-radius: 10px;
 }
 
+/* ================= CONTEÚDO PRINCIPAL ================= */
+.contaier {
+    width: 100%;
+    max-width: 1200px; /* Mantém alinhado */
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ================= TÍTULO ================= */
 #title {
-    margin: 40px 25px;
+    font-size: 2em;
+    margin: 20px 0;
+    text-align: center;
 }
 
-/* Destaques */
-.destaques, .projetos {
+/* ================= SEÇÕES ================= */
+.destaques, .projetos, .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
+
+/* ================= CARDS ================= */
 article {
     margin: 20px;
     text-align: center;
     border: none;
-    padding: 30px;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
-}
-article button {
-    background-color: #0f0f0f;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-/* Sobre nós */
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    justify-content: center;
-}
-
-#location-map, #sobrenos {
-    margin: 20px;
-    padding: 30px;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsivo para dispositivos móveis */
-@media (max-width: 768px) {
-    .banner {
-        height: auto;
-    }
-    .banner img {
-        height: auto;
-    }
-    .banner button {
-        font-size: 1em;
-        padding: 8px 16px;
-    }
-    #title {
-        font-size: 1.5em;
-        margin: 20px 15px;
-    }
-    .destaques, .projetos, .content {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    article {
-        padding: 20px;
-    }
-    article button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-    #location-map, #sobrenos {
-        padding: 20px;
-    }
+    padding: 10px;
 }

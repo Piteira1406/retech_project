@@ -1,131 +1,71 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/static/css/carrinho.css" rel="stylesheet">
-    <!--css do menu e do footer-->
-    <link href="/static/css/nav_footer.css" rel="stylesheet">
-</head>
+{% extends "partials/base.html" %}
 
-<body>
-    <header>
-        <nav>
-            <div>
-                <!-- Local Image-->
-                    <a id="Logo" href="/PaginaInicial.Html"><img src="/static/images/Retech.png" alt="Logo" width="100"wght="60"></a>
-                </div>
-                
-                    <!-- Menu-->
-                    <menu class="menu">
-                      <li><a href="/PaginaInicial.Html">Pagina Inicial</a></li>
-                      <li><a href="/Products.html"> Produtos</a></li>
-                      <li>
-                        <a>+Info</a>
-                        <ul>
-                          <li><a href="/Sobrenos.html">Sobre nós</a></li>
-                          <li><a href="/Contactos.html">Contactos</a></li>
-                          <li><a href="/Faqs.html">Faq's</a></li>
-                          <li><a href="/Legal.html">Legal</a></li>
-                          <li><a href="/Portefólio.html">Portefólio</a></li>
-                        </ul>
-                      </li>
-                    </menu>
-                    <div class="search-container">
-                      <input type="text" placeholder="Search.." />
-                      <button type="button">Search</button>
-                      </div>
-                  
-                      <div class="icon">
-                        <a href="/carrinho.html" class="icon-item"><i class="fa-solid fa-cart-shopping"></i></a>
-                        
-                        <a href="/Utilizador.html" class="icon-item"><i class="fa-solid fa-user"></i></a>
-                        <a href="/Login.html" class="icon-item"><i class="fa-solid fa-right-to-bracket"></i></a>
-                    </div>
-        </nav>
-    </header>
-    <main>
-    <section class="info">
-        <h2>Informações de Envio</h2>
-        <form class="info-form">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required><br><br>
+{% block title %}Product Details{% endblock %}
+{% block wrapper %}
 
-            <label for="morada">Morada:</label>
-            <input type="text" id="morada" name="morada" required><br><br>
+{% include 'partials/header.html' %}
 
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" required><br><br>
+<main>
+  <!-- Seção de Informações de Envio -->
+  <section class="info">
+      <h2>Informações de Envio</h2>
+      <form class="info-form">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" value="{{ current_user.username }}" required readonly><br><br>
 
-            <label for="pagamento">Método de Pagamento:</label>
-            <select id="pagamento" name="pagamento" required>
-                <option value="cartao">Cartão de Crédito</option>
-                <option value="paypal">PayPal</option>
-                <option value="tranferencia">Transferência Bancária</option>
-            </select>
-        </form>
-    </section>
+          <label for="morada">Morada:</label>
+          <input type="text" id="morada" name="morada" required><br><br>
 
-    <section class="checkout">
-        <h2>Resumo da Compra</h2>
-        <ul class="compra">
-            <li>Produto 1 - R$ 50,00</li>
-            <li>Produto 2 - R$ 30,00</li>
-            <li>Produto 3 - R$ 20,00</li>
-        </ul>
-        <p>Total: R$ 100,00</p>
-        <button type="button" onclick="alert('Compra Confirmada com Sucesso!')">Confirmar Compra</button>
-    </section>
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" required><br><br>
+
+          <label for="pagamento">Método de Pagamento:</label>
+          <select id="pagamento" name="pagamento" required>
+              <option value="cartao">Cartão de Crédito</option>
+              <option value="paypal">PayPal</option>
+              <option value="transferencia">Transferência Bancária</option>
+          </select>
+      </form>
+  </section>
+
+  <!-- Seção de Resumo do Carrinho -->
+  <section class="checkout">
+      <h2>Resumo da Compra</h2>
+      <ul class="compra">
+          {% if cart %}
+              {% for item in cart %}
+              <li id="product-{{ item.id }}">
+                  {{ item.product.name }} - €{{ "%.2f"|format(item.product.price) }}
+                  <button onclick="removerProduct({{ item.id }})">Remover</button>
+              </li>
+              {% endfor %}
+          {% else %}
+              <p>O seu carrinho está vazio.</p>
+          {% endif %}
+      </ul>
+      <p><strong>Total: €<span id="total">{{ "%.2f"|format(total) }}</span></strong></p>
+      <button type="button" onclick="confirmarCompra()">Confirmar Compra</button>
+  </section>
 </main>
-<footer class="footer list">
-    <!-- Criamos Divs para separar por colunas cada parte do footer-->
-    <li>
-      <h3>
-        <a href="/Retech/Sobrenos.html">Sobre Nós</a>
-      </h3>
-      <ul>
-        <li><a href="/Retech/Sobrenos.html">Quem somos?</a></li>
-        <li><a href="/Retech/Sobrenos.html">Missão</a></li>
-      </ul>
-    </li>
-    <li>
-      <h3>
-        <a href="/Retech/Faqs.html"> FAQ's</a>
-      </h3>
-      <ul>
-        <li><a href="/Retech/Faqs.html">Perguntas mais Frequentes </a></li>
-        <li><a href="/Retech/Faqs.html">Devoluções </a></li>
-      </ul>
-    </li>
-    <li>
-      <h3>
-        <a href="/Retech/Legal.html"> Legal</a>
-      </h3>
-      <ul>
-        <li><a href="/Retech/Legal.html">Termos de serviço </a></li>
-        <li>
-          <a href="/Retech/Legal.html">Termos e Condições Gerais de Venda</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h3>
-        <a href="/Retech/Portefólio.html"> Portefólio</a>
-      </h3>
-      <ul>
-        <li>
-          <a href="/Retech/Portefólio.html"
-            >Programa de Reciclagem de Eletrónicos</a
-          >
-        </li>
-        <li>
-          <a href="/Retech/Portefólio.html"
-            >Iniciativa de Tecnologia Sustentável em Escolas</a
-          >
-        </li>
-      </ul>
-    </li>
-  </footer>
-</body>
-</html>
+
+<!-- Script para Remover Produto do Carrinho -->
+<script>
+function removerProduct(productId) {
+  fetch(`/remover_product/${productId}`, { method: 'POST' })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              document.getElementById(`product-${productId}`).remove();
+              document.getElementById('total').innerText = data.novo_total.toFixed(2);
+          }
+      });
+}
+
+function confirmarCompra() {
+  alert('Compra Confirmada com Sucesso!');
+}
+</script>
+
+{% include 'partials/footer.html' %}
+
+{% endblock %}

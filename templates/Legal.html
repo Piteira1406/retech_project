@@ -1,56 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    
-    <!-- fontes do google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="C:\Users\migue\OneDrive\Desktop\Faculdade\Pw\Projeto 1\projeto\Home.Html">
-    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
-    <link href="/legal.css" rel="stylesheet">
-    <link href="/nav_footer.css" rel="stylesheet">
-    <!--Site ficar responsivo-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal</title>
-    <!--favicon-->
-    <link rel="icon" type="image/x-icon" href="/public/favicon.ico.png">
-</head>
-<body>
-    <header>  
-        <nav> 
-          <div>
-            <!-- Local Image-->
-                <a id="Logo" href="/PaginaInicial.Html"><img src="/public/Retech.png" alt="Logo" width="100"wght="60"></a>
-            </div>
-            
-                <!-- Menu-->
-                <menu class="menu">
-                  <li><a href="/PaginaInicial.Html">Pagina Inicial</a></li>
-                  <li><a href="/Products.html"> Produtos</a></li>
-                  <li>
-                    <a>+Info</a>
-                    <ul>
-                      <li><a href="/Sobrenos.html">Sobre nós</a></li>
-                      <li><a href="/Contactos.html">Contactos</a></li>
-                      <li><a href="/Faqs.html">Faq's</a></li>
-                      <li><a href="/Legal.html">Legal</a></li>
-                      <li><a href="/Portefólio.html">Portefólio</a></li>
-                    </ul>
-                  </li>
-                </menu>
-                <div class="search-container">
-                  <input type="text" placeholder="Search.." />
-                  <button type="button">Search</button>
-                  </div>
-              
-                  <div class="icon">
-                    <a href="/carrinho.html" class="icon-item"><i class="fa-solid fa-cart-shopping"></i></a>
-                    
-                    <a href="/Utilizador.html" class="icon-item"><i class="fa-solid fa-user"></i></a>
-                    <a href="/Login.html" class="icon-item"><i class="fa-solid fa-right-to-bracket"></i></a>
-                </div>
-        </nav>
-</header>
+{% extends "partials/base.html" %}
+
+{% block title %}Legal | ReTech{% endblock %}
+
+{% block wrapper %}
+    {% include 'partials/header.html' %}
     <main class="legal">
         <div>  
             <h2>Termos de serviço</h2>
@@ -127,58 +80,6 @@
                 
             <h5>Pagamentos 100% Seguros</h5>
                 <p>Na ReTech, a segurança de suas transações é nossa prioridade. Utilizamos tecnologia de criptografia SSL para proteger todas as informações de pagamento e garantir que suas compras sejam realizadas de maneira segura. Aceitamos diversos métodos de pagamento, como cartões de crédito, débito e carteiras digitais.</p>
-    </main>            
-            
-
-    <footer class="footer list">
-        <!-- Criamos Divs para separar por colunas cada parte do footer-->
-        <li>
-          <h3>
-            <a href="/Retech/Sobrenos.html">Sobre Nós</a>
-          </h3>
-          <ul>
-            <li><a href="/Retech/Sobrenos.html">Quem somos?</a></li>
-            <li><a href="/Retech/Sobrenos.html">Missão</a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>
-            <a href="/Retech/Faqs.html"> FAQ's</a>
-          </h3>
-          <ul>
-            <li><a href="/Retech/Faqs.html">Perguntas mais Frequentes </a></li>
-            <li><a href="/Retech/Faqs.html">Devoluções </a></li>
-          </ul>
-        </li>
-        <li>
-          <h3>
-            <a href="/Retech/Legal.html"> Legal</a>
-          </h3>
-          <ul>
-            <li><a href="/Retech/Legal.html">Termos de serviço </a></li>
-            <li>
-              <a href="/Retech/Legal.html">Termos e Condições Gerais de Venda</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>
-            <a href="/Retech/Portefólio.html"> Portefólio</a>
-          </h3>
-          <ul>
-            <li>
-              <a href="/Retech/Portefólio.html"
-                >Programa de Reciclagem de Eletrónicos</a
-              >
-            </li>
-            <li>
-              <a href="/Retech/Portefólio.html"
-                >Iniciativa de Tecnologia Sustentável em Escolas</a
-              >
-            </li>
-          </ul>
-        </li>
-      </footer>
-</body>
-
-</html>
+    </main>
+  {% include 'partials/footer.html' %}            
+{% endblock %}

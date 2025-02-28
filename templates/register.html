@@ -1,77 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registo</title>
-    <style>
-        body {
-            font-family: "Exo 2", sans-serif;
-            background-color: rgb(226, 225, 225);
-            scroll-behavior: smooth;
-            height: auto;
-            width: auto;
-            margin: 20px;
-            padding: 20px;
-            justify-content: center;
-        }
+{% extends "partials/base.html" %}
 
-
-        .info {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        input[type="text"], input[type="email"], input[type="password"], textarea {
-            display: block;
-            width: 90%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        form button {
-            background-color: #0f0f0f;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 4px;
-        }
-
-        form button:hover {
-            background-color: #2e2e2e;
-        }
-
-        @media (max-width: 768px) {
-            .main {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .info {
-                padding: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <main class="main">
-        <section class="info">
-            <h2>Criar Conta</h2>
-            <form action="/register" method="POST" >
-                <input type="text" id="username" name="username" placeholder="Nome" required>
-                <input type="email" id="email" name="email" placeholder="E-mail" required>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmar Password" required>
-                <button type="submit">Salvar Alterações</button>
-            </form>
-        </section>
-    </main>
-</body>
-</html>
+{% block title %}Registo | ReTech{% endblock %}
+{% block wrapper %}
+    {% include 'partials/header.html' %}
+        <body>
+            <main class="main">
+                <section class="info">
+                    <h2>Criar Conta</h2>
+                    <form action="/register" method="POST" >
+                        <input type="text" id="username" name="username" placeholder="Nome" required>
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirmar Password" required>
+                        <button type="submit">Salvar Alterações</button>
+                    </form>
+                </section>
+            </main>
+        </body>
+{% endblock %}

@@ -1,120 +1,103 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
 
-.wrapper {
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     font-family: 'Exo 2', sans-serif;
     background-color: #ecedf1;
     scroll-behavior: smooth;
-    margin: 0;
-    height: 100%;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
 }
 
-.img{
-    border-radius:  15px;
-}
+/* ================= HEADER ================= */
 
-header{
+header {
     background-color: #ffffff;
     width: 100%;
-    margin: auto;
-    padding: auto;
-    display: flex;  
+    padding: 10px 0;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#Logo{
-    float:left;
-    margin: 20px 0px;
-    padding: 0px;
-    align-self: flex-start;
-    align-items: center;
-}
-
-
-/*menu inicio */
-
-nav{
+nav {
     width: 100%;
-    align-items: center;
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    width: 100%;
-    gap:20px;
-    
-    
+    padding: 10px 20px;
 }
-.menu{  
-    font-size: 15px;
-    list-style:none;
-    float: left;
-    border:1px;
-    color:#4F4F4F;
-    margin: 0 20px;
-    padding: 0;
+
+#Logo img {
+    height: 50px;
+    cursor: pointer;
+}
+
+/* ================= MENU ================= */
+
+.menu {
+    list-style: none;
     display: flex;
-    justify-content: center;
-    
-
+    gap: 20px;
+    padding: 0;
+    margin: 0;
 }
-menu{
-    margin:0px;
-    padding-left: 0px;
+
+.menu li {
+    position: relative;
+    list-style: none;
 }
-menu li{
-        position:relative;
-        float:left;
-        border-right:1px;
-        list-style: none;
-        content: justify;
-    }
 
-
-menu li a{
-    background-color: #ffffff;
+.menu li a {
+    text-decoration: none;
     color: #171717;
-    text-decoration:none; 
-    padding:10px 10px; 
-    display:block;
-
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
-menu li a:hover{
+
+.menu li a:hover {
     color: #4F4F4F;
 }
-.menu li  ul{
-    list-style: none;   
-    position:absolute;
-    top: 15px;
-    padding-left: 10px;
-    display:none;
+
+/* SUBMENU */
+.menu li ul {
+    list-style: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
     background-color: #ffffff;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.menu li:hover ul, .menu li.over ul{display: grid ;}
-
-.menu li ul li{
-    border:1px;
-    display:-ms-grid;
-    width:150px;
+.menu li:hover ul {
+    display: block;
 }
 
+.menu li ul li {
+    padding: 5px 15px;
+}
 
-/* Search bar styling */
-.search-container{
+.menu li ul li a {
+    padding: 5px 0;
+    display: block;
+    white-space: nowrap;
+}
+
+/* ================= SEARCH BAR ================= */
+
+.search-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 10px 0;
+    gap: 10px;
 }
 
 .search-container input[type="text"] {
-    width: 300px;
+    width: 250px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -122,14 +105,8 @@ menu li a:hover{
     outline: none;
 }
 
-.search-container input[type="text"]:focus {
-    border-color: #4F4F4F;
-}
-
 .search-container button {
     padding: 10px 15px;
-    margin-left: 10px;
-    width: auto;
     border: none;
     background-color: #4F4F4F;
     color: #ffffff;
@@ -142,158 +119,113 @@ menu li a:hover{
     background-color: #171717;
 }
 
-/*icons style*/
-icon {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria uma grid com 3 colunas */
-    gap: 10px; /* Espaço entre os ícones */
-    justify-items: center; /* Centraliza os ícones horizontalmente */
-    align-items: center; /* Centraliza os ícones verticalmente */
-}
-  
-.icon-item {
-    font-size: 1rem; /* Ajuste o tamanho dos ícones */
-    color: black; /* Define a cor preta */
-    text-decoration: none; /* Remove o sublinhado */
-    transition: transform 0.3s ease, color 0.3s ease; /* Efeito ao passar o mouse */
-}
-  
-.icon-item:hover {
-    transform: scale(1.2); /* Aumenta ligeiramente o ícone ao passar o mouse */
-    color: gray; /* Muda a cor ao passar o mouse (opcional) */
-}
-  
+/* ================= ICONS ================= */
 
-
-
-#product-filter {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
-    outline: none;
-    background-size: 20px 20px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-left: 10px;
-}
-
-#product-filter:focus {
-    border-color: #4F4F4F;
-}
-/*menu fim*/    
-
-
-
-/*footer inicio*/
-
-footer {
-    background-color: #ffffff;
-    position: relative;
-    width: 100%;
+.icon {
     display: flex;
-    justify-content: space-around; 
-    justify-content: center;
+    gap: 15px;
     align-items: center;
 }
 
+.icon-item {
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-item:hover {
+    transform: scale(1.2);
+    color: gray;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
 footer ul {
-    display: inherit;
     list-style: none;
+    display: inherit;
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
 
 footer li {
-    position: relative;
-    margin-right: 20px;
-    list-style: none;
-    display: block;
-    
+    text-align: center;
 }
 
+footer li h3 {
+    margin-bottom: 10px;
+}
 
 footer li a {
     text-decoration: none;
-    padding: 10px 10px;
+    color: #171717;
+    padding: 5px 0;
     display: block;
+    font-weight: bold;
 }
 
 footer li a:hover {
     color: #4F4F4F;
 }
 
-/*footer fim*/
+/* ================= RESPONSIVIDADE ================= */
 
-/* Responsiveness for mobile devices */
+@media (max-width: 1024px) {
+    .menu {
+        gap: 10px;
+    }
 
+    .search-container input[type="text"] {
+        width: 200px;
+    }
+}
 
-/* Responsiveness for mobile devices */
 @media (max-width: 768px) {
+    header, nav, .menu, footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
     .search-container {
         flex-direction: column;
         width: 100%;
     }
 
     .search-container input[type="text"] {
-        width: 20%;
-        margin-bottom: 10px;
+        width: 80%;
     }
 
     .search-container button {
-        width: 20%;
-        margin-left: 0;
-    }
-}
-@media (max-width: 768px) {
-    header, nav, .menu, footer {
-        flex-direction: column;
-        align-items: center;
+        width: 50%;
     }
 
-    #Logo {
-        align-self: center;
-        margin-bottom: 10px;
-    }
-
-    .menu {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .menu li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu li ul {
-        position: static;
-        padding-left: 0;
-    }
-
-    .menu li ul li {
-        width: 100%;
+    .icon {
+        gap: 10px;
     }
 
     footer ul {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-
-    footer li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    h3 {
-        text-align: center;
+        gap: 15px;
     }
 }
-@media (max-width: 768px) {
-    .icon {
-        grid-template-columns: repeat(1, 1fr); /* 2 colunas em telas menores */
-    }
-}
-

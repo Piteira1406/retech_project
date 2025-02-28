@@ -33,6 +33,9 @@ class Cart(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
     quantity = db.Column(db.Integer, default=1)
+    product = db.relationship('Product')
+    
+    
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -48,7 +51,8 @@ def load_user(user_id):
 @app.route('/')
 def index():
     products = Product.query.all()
-    return render_template('pagina_inicial.html', products=products)  # Corrigido aqui!
+    return render_template('pagina_inicial.html', product_destaque=products)  # Correto!
+
 
 ########login/registo/logout########
 @app.route('/login', methods=['GET', 'POST'])
@@ -78,12 +82,12 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html')
 
-@app.route('/logout')
+@app.route('/logout', methods=['GET', 'POST'])
 @login_required
 def logout():
     logout_user()
     flash('Sessão terminada com sucesso!', 'success')
-    return redirect(url_for('pagina_inicial'))
+    return redirect(url_for('index'))
 
 #####################################################Utilizador######################################################
 ##########Perfil do utilizador##########
@@ -117,16 +121,17 @@ def delete_account():
 #######################################################Páginas de produtos############################################
 
 ############Produtos############
-@app.route('/products')
+@app.route('/products', methods=['GET', 'POST'])
 def products():
     products = Product.query.all()
     return render_template('products.html', products=products)
 
 ###########Detalhes do produto##############
-@app.route('/product_details/<int:product_id>')
-def product_deatils(product_id):
+@app.route('/product_details/<int:product_id>', methods=['GET', 'POST'])
+def product_details(product_id):
     product = Product.query.get_or_404(product_id)
-    return render_template('product_details.html', product=product)
+    recomendados = Product.query.filter(Product.id != product_id).limit(3).all()
+    return render_template('product_details.html', product=product, recomendados=recomendados)
 
 
 ####################################################Carrinho de compras############################################
@@ -136,22 +141,34 @@ cart = []
 @app.route('/cart')
 @login_required
 def cart_page():
-    products = [Product.query.get(prod_id) for prod_id in cart]
-    return render_template('cart.html', products=products)
+    cart = Cart.query.filter_by(user_id=current_user.id).all()
+    total = sum(item.product.price for item in cart)
+    return render_template('cart.html', cart=cart, total=total)
 
 #################Adicionar/Remover do carrinho#################
 @app.route('/add_to_cart/<int:product_id>', methods=['POST'])
 @login_required
 def add_to_cart(product_id):
-    cart.append(product_id)
-    return jsonify({'message': 'Produto adicionado ao carrinho!'})
+    item_existente = Cart.query.filter_by(user_id=current_user.id, product_id=product_id).first()
+    if not item_existente:
+        novo_item = Cart(user_id=current_user.id, product_id=product_id)
+        db.session.add(novo_item)
+        db.session.commit()
+        return jsonify({'message': 'Produto adicionado ao carrinho!'})
+    return jsonify({'message': 'Produto já está no carrinho!'})
+
 
 @app.route('/remove_from_cart/<int:product_id>', methods=['POST'])
 @login_required
 def remove_from_cart(product_id):
-    if product_id in cart:
-        cart.remove(product_id)
-    return jsonify({'message': 'Produto removido do carrinho!'})
+    item = Cart.query.filter_by(user_id=current_user.id, id=product_id).first()
+    if item:
+        db.session.delete(item)
+        db.session.commit()
+        novo_total = sum(i.product.price for i in Cart.query.filter_by(user_id=current_user.id).all())
+        return jsonify(success=True, novo_total=novo_total)
+    return jsonify(success=False)
+
 
 #################Finalizar compra#################
 @app.route('/checkout', methods=['GET', 'POST'])
@@ -160,9 +177,9 @@ def checkout():
     if request.method == 'POST':
         cart.clear()
         flash('Compra realizada com sucesso!', 'success')
-        return redirect(url_for('index'))
+        return redirect(url_for('pagina_inicial'))
     products = [Product.query.get(prod_id) for prod_id in cart]
-    return render_template('checkout.html', products=products)
+    return render_template('cart.html', products=products)
 
 ####################################################Gestão/ADMIN############################################
 

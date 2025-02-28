@@ -1,99 +1,139 @@
+/* ================= LAYOUT GERAL ================= */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-
+/* ================= SEÇÃO DO CARRINHO ================= */
 section {
     background-color: #fff;
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    display: grid; /* Ativa o Grid */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas flexíveis */
-    justify-content: center; 
-    flex-wrap: wrap;
-    padding: 10px;
+    max-width: 600px; /* Aumentado para melhor uso do espaço */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2 {
     color: #333;
     text-align: center;
+    margin-bottom: 15px;
 }
 
+/* ================= FORMULÁRIO DE ENVIO ================= */
 .info-form {
     display: flex;
     flex-direction: column;
-    input, select {
-        margin-bottom: 15px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
+    width: 100%;
+}
+
+.info-form input,
+.info-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
 }
 
 label {
     margin-bottom: 5px;
     font-weight: bold;
 }
-.info-form
 
-input, select {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
+/* ================= BOTÕES ================= */
 button {
     background-color: #28a745;
     color: #fff;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #218838;
 }
 
+/* ================= ITENS DO CARRINHO ================= */
 .compra {
     list-style-type: none;
     padding: 0;
+    width: 100%;
 }
 
 .compra li {
     background-color: #f9f9f9;
-    margin: 5px 0;
-    padding: 10px;
+    margin: 8px 0;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
 }
 
-p {
+.compra li button {
+    background-color: #dc3545;
+    padding: 8px;
+    font-size: 0.9rem;
+    width: auto;
+}
+
+.compra li button:hover {
+    background-color: #c82333;
+}
+
+/* ================= TOTAL E CHECKOUT ================= */
+.total {
     font-weight: bold;
+    font-size: 1.2rem;
     text-align: center;
+    margin: 15px 0;
 }
 
+.checkout-button {
+    background-color: #007bff;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+/* ================= RESPONSIVIDADE ================= */
 @media (max-width: 600px) {
     section {
         padding: 15px;
-        max-width: 80%;
+        max-width: 90%;
         box-shadow: none;
     }
 
-    .info-form {
-        input, select {
-            padding: 8px;
-        }
+    .info-form input,
+    .info-form select {
+        padding: 8px;
     }
 
     button {
-        padding: 8px;
+        padding: 10px;
+        font-size: 0.9rem;
     }
 
     .compra li {
-        padding: 8px;
+        padding: 10px;
+        font-size: 0.9rem;
     }
 }
-

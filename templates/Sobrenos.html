@@ -1,128 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    
-    <!-- fontes do google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="C:\Users\migue\OneDrive\Desktop\Faculdade\Pw\Projeto 1\projeto\Home.Html">
-    <link href="/sobrenós.css" rel="stylesheet">
-    <link href="/nav_footer.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/8675213cad.js" crossorigin="anonymous"></script>
-    <!--Site ficar responsivo-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós</title>
-    <!--favicon-->
-    <link rel="icon" type="image/x-icon" href="">
-</head>
-<body>
-    
-    <header>  
-        <nav> 
-            <div>
-            <!-- Local Image-->
-                <a id="Logo" href="/PaginaInicial.Html"><img src="/public/Retech.png" alt="Logo" width="100"wght="60"></a>
+{% extends "partials/base.html" %}
+
+{% block title %}Sobre Nós{% endblock %}
+
+{% block wrapper %}
+    {% include 'partials/header.html' %}
+
+        <main>
+            <section>
+            <div id="sobrenos">
+                <h1> Sobre nós </h1>
+                <p> Somos uma empresa de tecnologia 100% portuguesa empenhada numa mundança no mercado tecnologico 
+                    em Portugal. Presamos a qualidade e visamos ir ao encontro de todo o tipo de clientes, com preços acessiveis em todo o tipo de artigos.
+                    venha dar uma vista de olhos ao nosso catálogo para ver as nossas novidades e não se esqueça de visitar principalmente as nossas promoções!!
+                </p>   
             </div>
-                  <!-- Menu-->
-                        <menu class="menu">
-                            <li><a href="/PaginaInicial.Html">Pagina Inicial</a></li>
-                            <li><a href="/Products.html"> Produtos</a></li>
-                            <li>
-                              <a>+Info</a>
-                              <ul>
-                                <li><a href="/Sobrenos.html">Sobre nós</a></li>
-                                <li><a href="/Contactos.html">Contactos</a></li>
-                                <li><a href="/Faqs.html">Faq's</a></li>
-                                <li><a href="/Legal.html">Legal</a></li>
-                                <li><a href="/Portefólio.html">Portefólio</a></li>
-                              </ul>
-                            </li>
-                          </menu>
-                          <div class="search-container">
-                            <input type="text" placeholder="Search.." />
-                            <button type="button">Search</button>
-                            </div>
-                        
-                            <div class="icon">
-                                <a href="/carrinho.html" class="icon-item"><i class="fa-solid fa-cart-shopping"></i></a>
-                                
-                                <a href="/Utilizador.html" class="icon-item"><i class="fa-solid fa-user"></i></a>
-                                <a href="/Login.html" class="icon-item"><i class="fa-solid fa-right-to-bracket"></i></a>
-                            </div>
-        </nav>
-</header>
-
-<main>
-    <section>
-    <div id="sobrenos">
-        <h1> Sobre nós </h1>
-        <p> Somos uma empresa de tecnologia 100% portuguesa empenhada numa mundança no mercado tecnologico 
-            em Portugal. Presamos a qualidade e visamos ir ao encontro de todo o tipo de clientes, com preços acessiveis em todo o tipo de artigos.
-            venha dar uma vista de olhos ao nosso catálogo para ver as nossas novidades e não se esqueça de visitar principalmente as nossas promoções!!
-        </p>   
-    </div>
-    <div id="objetivo">
-        <h2> Qual é o nosso objetivo? </h2>
-        <p> O nosso objetivo é que os portugueses possam vir a ter cada vez mais acesso a produtos tecnologicos
-            de maneira mais acessível, e de modo a não ter um impacto tão negativo ao meio ambiente.
-            Sabe aquele portatil ou consola que tanto ambicionava mas que sempre adiou a sua compra por ser um artigo
-            que ia pesar muito no seu orçamento? É para isso que nós, ReTech estamos aqui!
-        </p>
-    </div>
-    <div id="compromisso">
-        <h3> A nossa visão e compromisso </h3>
-        <p> Quando se trata de artigos em que ja tiveram um antigo dono todos nós ficamos com um pé
-            atrás quanto a isso, ainda mais quando se fala em artigos tecnológicos. Mas quem nunca comprou 
-            um carro em segunda mão? O que nós queremos passar, é que se tudo for devidamente reparado, não 
-            há necessidade de comprar tudo em «primeira mão».
-            Todo e qualquer equipamento que passa por nós é devidamente testado, limpo e reparado.
-            A nossa visão é sermos a referência de recondicionados na Europa e no mundo, limpando
-            qualquer estigma associado a artigos recondicionados.
-        </p>
-    </div>
-    </section>
-</main>
-
-<footer class="footer list">
-    <!-- Criamos Divs para separar por colunas cada parte do footer-->
-    <li>
-        <h3>
-            <a href="/Sobrenos.html">Sobre Nós</a>
-        </h3>
-        <ul>
-            <li> <a href="/Sobrenos.html">Quem somos?</a></li>
-            <li> <a href="/Sobrenos.html">Missão</a></li>
-        </ul>
-    </li>
-    <li>
-        <h3>
-            <a href="/Faqs.html"> FAQ's</a>
-        </h3>
-            <ul>
-                <li><a href="/Faqs.html">Perguntas mais Frequentes </a> </li>
-                <li><a href="/Faqs.html">Devoluções </a></li>
-            </ul>
-    </li>
-    <li>
-        <h3>
-            <a href="/Legal.html"> Legal</a>
-        </h3>
-            <ul>
-                <li><a href="/Legal.html">Termos de serviço </a> </li>
-                <li><a href="/Legal.html">Termos e Condições Gerais de Venda</a></li>
-                
-            </ul>
-    </li>
-    <li>
-        <h3>
-            <a href="/Portefólio.html"> Portefólio</a>
-        </h3>
-        <ul>
-            <li><a href="/Portefólio.html">Programa de Reciclagem de Eletrónicos</a> </li>
-            <li><a href="/Portefólio.html">Iniciativa de Tecnologia Sustentável em Escolas</a></li>
-   
-        </ul>
-    </li>
-</footer>   
-</body>
-</html>
+            <div id="objetivo">
+                <h2> Qual é o nosso objetivo? </h2>
+                <p> O nosso objetivo é que os portugueses possam vir a ter cada vez mais acesso a produtos tecnologicos
+                    de maneira mais acessível, e de modo a não ter um impacto tão negativo ao meio ambiente.
+                    Sabe aquele portatil ou consola que tanto ambicionava mas que sempre adiou a sua compra por ser um artigo
+                    que ia pesar muito no seu orçamento? É para isso que nós, ReTech estamos aqui!
+                </p>
+            </div>
+            <div id="compromisso">
+                <h3> A nossa visão e compromisso </h3>
+                <p> Quando se trata de artigos em que ja tiveram um antigo dono todos nós ficamos com um pé
+                    atrás quanto a isso, ainda mais quando se fala em artigos tecnológicos. Mas quem nunca comprou 
+                    um carro em segunda mão? O que nós queremos passar, é que se tudo for devidamente reparado, não 
+                    há necessidade de comprar tudo em «primeira mão».
+                    Todo e qualquer equipamento que passa por nós é devidamente testado, limpo e reparado.
+                    A nossa visão é sermos a referência de recondicionados na Europa e no mundo, limpando
+                    qualquer estigma associado a artigos recondicionados.
+                </p>
+            </div>
+            </section>
+        </main>
+    {% include 'partials/footer.html' %}
+{% endblock %}
